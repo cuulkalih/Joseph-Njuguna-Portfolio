@@ -1,0 +1,6 @@
+# Ignore all markdown documentation files
+*.md
+
+# Ignore duplicate files (with (1) suffix)
+* (1).*
+
