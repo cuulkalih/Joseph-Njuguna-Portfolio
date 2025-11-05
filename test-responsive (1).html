@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout Tester - Joseph Njuguna Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 32px;
+        }
+        
+        .subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+        
+        .controls {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .control-group {
+            margin-bottom: 15px;
+        }
+        
+        .control-group:last-child {
+            margin-bottom: 0;
+        }
+        
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        
+        .device-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        button {
+            padding: 10px 20px;
+            border: 2px solid #667eea;
+            background: white;
+            color: #667eea;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        
+        button:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+        
+        button.active {
+            background: #667eea;
+            color: white;
+        }
+        
+        .iframe-container {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .device-info {
+            margin-bottom: 15px;
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .device-info strong {
+            color: #333;
+            font-size: 16px;
+        }
+        
+        .frame-wrapper {
+            border: 3px solid #333;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            transition: all 0.5s ease;
+            background: white;
+            position: relative;
+        }
+        
+        .frame-wrapper.phone {
+            border-radius: 30px;
+            border-width: 12px;
+        }
+        
+        .frame-wrapper.tablet {
+            border-radius: 20px;
+            border-width: 8px;
+        }
+        
+        iframe {
+            border: none;
+            display: block;
+            background: white;
+        }
+        
+        .tips {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 20px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        .tips h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        
+        .tips ul {
+            margin-left: 20px;
+        }
+        
+        .tips li {
+            margin-bottom: 5px;
+            color: #555;
+        }
+        
+        .orientation-toggle {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📱 Portfolio Responsive Layout Tester</h1>
+        <p class="subtitle">Test your portfolio across different device sizes</p>
+        
+        <div class="controls">
+            <div class="control-group">
+                <label>📱 Select Device Size:</label>
+                <div class="device-buttons">
+                    <button onclick="setSize(320, 568, 'phone', 'iPhone SE (Old)')" data-device="mobile-s">
+                        📱 Mobile S<br><small>320×568</small>
+                    </button>
+                    <button onclick="setSize(375, 667, 'phone', 'iPhone SE')" data-device="mobile-m" class="active">
+                        📱 Mobile M<br><small>375×667</small>
+                    </button>
+                    <button onclick="setSize(414, 896, 'phone', 'iPhone 11 Pro')" data-device="mobile-l">
+                        📱 Mobile L<br><small>414×896</small>
+                    </button>
+                    <button onclick="setSize(768, 1024, 'tablet', 'iPad')" data-device="tablet">
+                        📱 Tablet<br><small>768×1024</small>
+                    </button>
+                    <button onclick="setSize(1024, 1366, 'tablet', 'iPad Pro')" data-device="tablet-l">
+                        💻 Tablet L<br><small>1024×1366</small>
+                    </button>
+                    <button onclick="setSize(1366, 768, 'desktop', 'Laptop')" data-device="laptop">
+                        💻 Laptop<br><small>1366×768</small>
+                    </button>
+                    <button onclick="setSize(1920, 1080, 'desktop', 'Desktop')" data-device="desktop">
+                        🖥️ Desktop<br><small>1920×1080</small>
+                    </button>
+                </div>
+                
+                <div class="orientation-toggle">
+                    <button onclick="rotateScreen()" id="rotateBtn">
+                        🔄 Rotate to Landscape
+                    </button>
+                    <button onclick="flipPortfolio()">
+                        ♻️ Flip Portfolio Side
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="iframe-container">
+            <div class="device-info">
+                <strong id="deviceName">iPhone SE</strong><br>
+                <span id="dimensions">375 × 667 pixels</span> | 
+                <span id="orientation">Portrait</span>
+            </div>
+            
+            <div class="frame-wrapper phone" id="frameWrapper">
+                <iframe 
+                    src="index.html" 
+                    id="portfolioFrame" 
+                    width="375" 
+                    height="667"
+                    title="Portfolio Preview"
+                ></iframe>
+            </div>
+            
+            <div class="tips">
+                <h3>💡 Testing Tips:</h3>
+                <ul>
+                    <li><strong>Image Position:</strong> On mobile (< 768px), image should be on top, centered</li>
+                    <li><strong>Text Alignment:</strong> Mobile = centered, Desktop = left-aligned</li>
+                    <li><strong>Navigation:</strong> Vertical on mobile, horizontal on desktop</li>
+                    <li><strong>Projects:</strong> 1 column on mobile, 2-3 on desktop</li>
+                    <li><strong>Image Size:</strong> 200-250px on mobile, 350px on desktop</li>
+                    <li><strong>Flip Button:</strong> Text hidden on mobile, shown on desktop</li>
+                    <li><strong>Scroll:</strong> No horizontal scrolling on any size</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        let currentWidth = 375;
+        let currentHeight = 667;
+        let currentOrientation = 'portrait';
+        let currentDeviceName = 'iPhone SE';
+        let currentDeviceType = 'phone';
+        
+        function setSize(width, height, type, name) {
+            currentWidth = width;
+            currentHeight = height;
+            currentDeviceName = name;
+            currentDeviceType = type;
+            currentOrientation = width < height ? 'portrait' : 'landscape';
+            
+            updateDisplay();
+            updateActiveButton();
+        }
+        
+        function updateDisplay() {
+            const iframe = document.getElementById('portfolioFrame');
+            const wrapper = document.getElementById('frameWrapper');
+            const deviceName = document.getElementById('deviceName');
+            const dimensions = document.getElementById('dimensions');
+            const orientation = document.getElementById('orientation');
+            const rotateBtn = document.getElementById('rotateBtn');
+            
+            iframe.width = currentWidth;
+            iframe.height = currentHeight;
+            
+            wrapper.className = 'frame-wrapper ' + currentDeviceType;
+            
+            deviceName.textContent = currentDeviceName;
+            dimensions.textContent = `${currentWidth} × ${currentHeight} pixels`;
+            orientation.textContent = currentOrientation.charAt(0).toUpperCase() + currentOrientation.slice(1);
+            
+            if (currentOrientation === 'portrait') {
+                rotateBtn.textContent = '🔄 Rotate to Landscape';
+            } else {
+                rotateBtn.textContent = '🔄 Rotate to Portrait';
+            }
+        }
+        
+        function rotateScreen() {
+            const temp = currentWidth;
+            currentWidth = currentHeight;
+            currentHeight = temp;
+            currentOrientation = currentOrientation === 'portrait' ? 'landscape' : 'portrait';
+            
+            updateDisplay();
+        }
+        
+        function flipPortfolio() {
+            const iframe = document.getElementById('portfolioFrame');
+            const iframeWindow = iframe.contentWindow;
+            
+            try {
+                const flipButton = iframeWindow.document.getElementById('flipButton');
+                if (flipButton) {
+                    flipButton.click();
+                }
+            } catch (e) {
+                alert('Unable to flip. Please use the flip button in the preview.');
+            }
+        }
+        
+        function updateActiveButton() {
+            const buttons = document.querySelectorAll('.device-buttons button');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            
+            // Find closest matching button based on current dimensions
+            buttons.forEach(btn => {
+                if (btn.textContent.includes(`${currentWidth}×${currentHeight}`)) {
+                    btn.classList.add('active');
+                }
+            });
+        }
+        
+        // Initialize on load
+        window.addEventListener('load', () => {
+            updateDisplay();
+        });
+    </script>
+</body>
+</html>
+
+
+

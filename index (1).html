@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Joseph Njuguna - Cybersecurity Specialist & Software Developer | Information Security & Forensics Professional from Nairobi, Kenya">
+    <meta name="keywords" content="Joseph Njuguna, CUULKAL, Cybersecurity, Software Developer, Information Security, Forensics, Web Development">
+    <meta name="author" content="Joseph Njuguna">
+    <meta property="og:title" content="Joseph Njuguna | Cybersecurity & Software Developer">
+    <meta property="og:description" content="Building secure and innovative digital systems that protect data and empower innovation.">
+    <meta property="og:type" content="website">
+    
+    <title>Joseph Njuguna | Next Gen Labs — Cybersecurity & Software Developer</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Flip Toggle Button -->
+    <button class="flip-button" id="flipButton" aria-label="Switch to Software Development side" aria-pressed="false" data-side="front">
+        <i class="fas fa-rotate"></i>
+        <span class="flip-label">Switch Side</span>
+        <span class="flip-badge" id="flipBadge" aria-hidden="true">1/2</span>
+        <span class="flip-kbd" aria-hidden="true">Press F</span>
+    </button>
+    <!-- Attention arrow pointing to flip button -->
+    <div class="flip-pointer" id="flipPointer" aria-hidden="true">⬇</div>
+    <!-- First-time helper tooltip -->
+    <div class="flip-tooltip" id="flipTooltip" role="status" aria-live="polite">
+        <span class="tip-arrow">▼</span>
+        <span class="tip-text">This portfolio has two sides. Click here to flip.</span>
+    </div>
+
+    <!-- Card Container -->
+    <div class="card-container" id="cardContainer">
+        
+        <!-- FRONT SIDE - Cybersecurity -->
+        <div class="card-face front">
+            <!-- Animated Background -->
+            <div class="animated-bg">
+                <div class="matrix-rain"></div>
+                <canvas id="particlesCanvas"></canvas>
+            </div>
+
+            <!-- Content -->
+            <div class="content-wrapper">
+                <!-- Header -->
+                <header class="header cyber-header">
+                    <div class="logo">
+                        <span class="brand">Next Gen Labs</span>
+                        <span class="brand-subtitle">Security Systems</span>
+                    </div>
+                    <nav class="nav">
+                        <a href="#about-cyber" class="nav-link">About</a>
+                        <a href="#projects-cyber" class="nav-link">Projects</a>
+                        <a href="#skills-cyber" class="nav-link">Skills</a>
+                        <a href="#contact-cyber" class="nav-link">Contact</a>
+                    </nav>
+                </header>
+
+                <!-- Hero Section -->
+                <section class="hero cyber-hero">
+                    <div class="hero-content hero-split">
+                        <!-- Left Side - Info -->
+                        <div class="hero-text">
+                            <h1 class="hero-title">
+                                <span class="glitch" data-text="JOSEPH NJUGUNA">JOSEPH NJUGUNA</span>
+                            </h1>
+                            <p class="hero-subtitle">Cybersecurity & Network Security Specialist</p>
+                            <!-- Inline terminal beside image (stacked under title) -->
+                            <div class="hero-terminal">
+                                <div class="terminal" aria-label="Cybersecurity terminal typing simulation">
+                                    <div class="terminal-header">
+                                        <span class="dot red"></span>
+                                        <span class="dot yellow"></span>
+                                        <span class="dot green"></span>
+                                        <span class="title">/usr/local/next-gen-labs/security console</span>
+                                    </div>
+                                    <div class="terminal-body">
+                                        <pre class="terminal-screen" id="terminalOutput"></pre>
+                                        <span class="terminal-cursor" id="terminalCursor">█</span>
+                                        <div class="scanlines" aria-hidden="true"></div>
+                                    </div>
+                                </div>
+                                <div class="terminal-cta">
+                                    <a href="#projects-cyber" class="contact-btn cyber-btn" id="terminalCta" style="display:none">
+                                        <i class="fas fa-shield-alt"></i> Explore My Work
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="hero-tagline">Powered by Next Gen Labs</p>
+                            <p class="hero-description">
+                                <i class="fas fa-shield-alt"></i> Bachelor of Applied Computing (Information Security & Forensics), 2025 Graduate
+                            </p>
+                            <div class="hero-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</span>
+                                <span><i class="fas fa-briefcase"></i> Next Gen Labs</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Right Side - Profile Image -->
+                        <div class="hero-image">
+                            <div class="profile-image-container cyber-profile">
+                                <div class="profile-image-wrapper">
+                                    <img src="assets/profile.jpg" alt="Joseph Njuguna - Cybersecurity Specialist" class="profile-image">
+                                    <div class="profile-border"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                
+
+                <!-- About Section -->
+                <section class="section" id="about-cyber">
+                    <h2 class="section-title"><i class="fas fa-user-shield"></i> Next Gen Labs | Security Systems</h2>
+                    <div class="about-content">
+                        <p>
+                            I’m a cybersecurity and network security specialist passionate about protecting digital ecosystems through
+                            innovation and research. As a graduate in Information Security & Forensics, I focus on intrusion detection,
+                            ethical hacking, and building secure, resilient systems.
+                        </p>
+                        <p class="mission">
+                            <strong>Mission:</strong> Empower organizations with secure and intelligent digital defense solutions.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Projects Section -->
+                <section class="section" id="projects-cyber">
+                    <h2 class="section-title"><i class="fas fa-project-diagram"></i> Key Projects</h2>
+                    <div class="projects-grid">
+                        <div class="project-card cyber-card">
+                            <div class="project-icon">
+                                <i class="fas fa-network-wired"></i>
+                            </div>
+                            <h3>Hybrid Intrusion Detection System</h3>
+                            <p>Advanced IDS integrating signature-based and machine learning algorithms for real-time threat detection.</p>
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">ML</span>
+                                <span class="tag">Network Security</span>
+                            </div>
+                            <!-- <p><a class="contact-btn cyber-btn btn-disabled" href="#" role="link" aria-disabled="true">No Preview</a></p> -->
+                        </div>
+
+                        <div class="project-card cyber-card">
+                            <div class="project-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <h3>Web-Based NIDS</h3>
+                            <p>C4.5 algorithm–based web intrusion detection system with PHP and MySQL backend for real-time alerts.</p>
+                            <div class="project-tags">
+                                <span class="tag">PHP</span>
+                                <span class="tag">MySQL</span>
+                                <span class="tag">C4.5</span>
+                            </div>
+                            <!-- <p><a class="contact-btn cyber-btn btn-disabled" href="#" role="link" aria-disabled="true">No Preview</a></p> -->
+                        </div>
+
+                        <div class="project-card cyber-card">
+                            <div class="project-icon">
+                                <i class="fas fa-bug"></i>
+                            </div>
+                            <h3>Simple IDS in Python</h3>
+                            <p>Lightweight network monitoring tool built for education and small-scale traffic analysis.</p>
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Packet Analysis</span>
+                            </div>
+                            <!-- <p><a class="contact-btn cyber-btn btn-disabled" href="#" role="link" aria-disabled="true">No Preview</a></p> -->
+                        </div>
+                        <div class="project-card cyber-card">
+                            <div class="project-icon">
+                                <i class="fas fa-gavel"></i>
+                            </div>
+                            <h3>Auction Management System (Secure Edition)</h3>
+                            <p>Secure online auction system with built-in intrusion detection layer to monitor and flag suspicious activity.</p>
+                            <div class="project-tags">
+                                <span class="tag">PHP</span>
+                                <span class="tag">MySQL</span>
+                                <span class="tag">Security Layer</span>
+                            </div>
+                            <!-- <p><a class="contact-btn cyber-btn btn-disabled" href="#" role="link" aria-disabled="true">No Preview</a></p> -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Skills Section -->
+                <section class="section" id="skills-cyber">
+                    <h2 class="section-title"><i class="fas fa-code"></i> Skills & Expertise</h2>
+                    <div class="skills-container">
+                        <div class="skill-item">
+                            <i class="fas fa-shield-virus"></i>
+                            <span>Network Security</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-user-secret"></i>
+                            <span>Ethical Hacking</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-fingerprint"></i>
+                            <span>Digital Forensics</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-server"></i>
+                            <span>IDS/IPS</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-router"></i>
+                            <span>MikroTik Router Config</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i>
+                            <span>Security Automation (Python)</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-search-plus"></i>
+                            <span>Vulnerability Analysis</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Contact Section -->
+                <section class="section contact-section" id="contact-cyber">
+                    <h2 class="section-title"><i class="fas fa-envelope"></i> Get In Touch</h2>
+                    <p class="contact-cta">Secure your system with me.</p>
+                    <div class="contact-links">
+                        <a href="mailto:ndiirangujooseph@gmail.com" class="contact-btn cyber-btn">
+                            <i class="fas fa-envelope"></i> Email
+                        </a>
+                        <a href="https://github.com/cuulkallih" target="_blank" class="contact-btn cyber-btn">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="https://linkedin.com/in/joseph-ndirangu-750765356" target="_blank" class="contact-btn cyber-btn">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                        <a href="tel:+254111480604" class="contact-btn cyber-btn">
+                            <i class="fas fa-phone"></i> +254 111 480 604
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Footer -->
+                <footer class="footer">
+                    <p>&copy; 2025 Joseph Njuguna | CUULKAL</p>
+                </footer>
+            </div>
+        </div>
+
+        <!-- BACK SIDE - Software Development -->
+        <div class="card-face back">
+            <!-- Gradient Background -->
+            <div class="gradient-bg"></div>
+
+            <!-- Content -->
+            <div class="content-wrapper">
+                <!-- Header -->
+                <header class="header dev-header">
+                    <div class="logo">
+                        <span class="brand">Next Gen Labs</span>
+                        <span class="brand-subtitle">Digital Solutions</span>
+                    </div>
+                    <nav class="nav">
+                        <a href="#about-dev" class="nav-link">About</a>
+                        <a href="#projects-dev" class="nav-link">Projects</a>
+                        <a href="#skills-dev" class="nav-link">Skills</a>
+                        <a href="#contact-dev" class="nav-link">Contact</a>
+                    </nav>
+                </header>
+
+                <!-- Hero Section -->
+                <section class="hero dev-hero">
+                    <div class="hero-content hero-split">
+                        <!-- Left Side - Info -->
+                        <div class="hero-text">
+                            <h1 class="hero-title">JOSEPH NJUGUNA</h1>
+                            <p class="hero-subtitle">Full-Stack Developer | Founder, Next Gen Labs</p>
+                            <p class="hero-tagline">Powered by Next Gen Labs</p>
+                            <p class="hero-description">
+                                <i class="fas fa-laptop-code"></i> Full-Stack Web & Mobile Development
+                            </p>
+                            <div class="hero-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</span>
+                                <span><i class="fas fa-palette"></i> Creative & Functional</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Right Side - Profile Image -->
+                        <div class="hero-image">
+                            <div class="profile-image-container dev-profile">
+                                <div class="profile-image-wrapper">
+                                    <img src="assets/profile.jpg" alt="Joseph Njuguna - Software Developer" class="profile-image">
+                                    <div class="profile-border"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- About Section -->
+                <section class="section" id="about-dev">
+                    <h2 class="section-title"><i class="fas fa-user-cog"></i> Next Gen Labs | Digital Solutions</h2>
+                    <div class="about-content">
+                        <p>
+                            I’m a full-stack developer and cybersecurity specialist creating functional, secure, and user-focused digital products.
+                            Through Next Gen Labs, I combine creativity, security, and performance to deliver impactful software solutions.
+                        </p>
+                        <p class="mission">
+                            <strong>Passion:</strong> Designing applications that bridge innovation with reliability.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Projects Section -->
+                <section class="section" id="projects-dev">
+                    <h2 class="section-title"><i class="fas fa-rocket"></i> Featured Projects</h2>
+                    <div class="projects-grid">
+                        <div class="project-card dev-card">
+                            <div class="project-icon">
+                                <i class="fas fa-cloud-sun"></i>
+                            </div>
+                            <h3>Weather App</h3>
+                            <p>Modern weather application with real-time data, built using Laravel backend and Next.js with TypeScript frontend.</p>
+                            <div class="project-tags">
+                                <span class="tag">Laravel</span>
+                                <span class="tag">Next.js</span>
+                                <span class="tag">TypeScript</span>
+                            </div>
+                            <!-- <p><a class="contact-btn dev-btn btn-disabled" href="#" role="link" aria-disabled="true">No Preview</a></p> -->
+                        </div>
+
+                        <div class="project-card dev-card">
+                            <div class="project-icon">
+                                <i class="fas fa-shopping-bag"></i>
+                            </div>
+                            <h3>Shau Kenya Boutique Shop</h3>
+                            <p>E-commerce platform for a Kenyan boutique featuring React frontend and Supabase backend for real-time inventory.</p>
+                            <div class="project-tags">
+                                <span class="tag">React</span>
+                                <span class="tag">Supabase</span>
+                                <span class="tag">E-commerce</span>
+                            </div>
+                            <p><a class="contact-btn dev-btn" href="https://shaubrands.netlify.app/" target="_blank" rel="noopener">Live Preview Available</a></p>
+                        </div>
+
+                        <div class="project-card dev-card">
+                            <div class="project-icon">
+                                <i class="fas fa-cash-register"></i>
+                            </div>
+                            <h3>PangaStock POS System</h3>
+                            <p>Local PHP-based Point of Sale system for inventory management and sales tracking with offline capabilities.</p>
+                            <div class="project-tags">
+                                <span class="tag">PHP</span>
+                                <span class="tag">MySQL</span>
+                                <span class="tag">POS</span>
+                            </div>
+                            <p><a class="contact-btn dev-btn btn-disabled" href="#" role="link" aria-disabled="true">No Preview</a></p>
+                        </div>
+
+                        <div class="project-card dev-card">
+                            <div class="project-icon">
+                                <i class="fas fa-hospital"></i>
+                            </div>
+                            <h3>Marira Patient Record System</h3>
+                            <p>Comprehensive patient management system for Marira Medical Center, handling records, appointments, and billing.</p>
+                            <div class="project-tags">
+                                <span class="tag">PHP</span>
+                                <span class="tag">Healthcare</span>
+                                <span class="tag">MySQL</span>
+                            </div>
+                            <!-- <p><a class="contact-btn dev-btn btn-disabled" href="#" role="link" aria-disabled="true">No Preview</a></p> -->
+                        </div>
+                        <div class="project-card dev-card">
+                            <div class="project-icon">
+                                <i class="fas fa-gavel"></i>
+                            </div>
+                            <h3>Auction Management System</h3>
+                            <p>Real-time auction platform with secure bidding and user verification.</p>
+                            <div class="project-tags">
+                                <span class="tag">PHP</span>
+                                <span class="tag">MySQL</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">Bootstrap</span>
+                            </div>
+                            <!-- <p><a class="contact-btn dev-btn btn-disabled" href="#" role="link" aria-disabled="true">No Preview</a></p> -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Skills Section -->
+                <section class="section" id="skills-dev">
+                    <h2 class="section-title"><i class="fas fa-tools"></i> Skills & Technologies</h2>
+                    <div class="skills-container">
+                        <div class="skill-item">
+                            <i class="fab fa-php"></i>
+                            <span>PHP</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-laravel"></i>
+                            <span>Laravel</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-js"></i>
+                            <span>Next.js</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>Supabase</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>MySQL</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-bolt"></i>
+                            <span>Vite</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-flutter"></i>
+                            <span>Flutter</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-pencil-ruler"></i>
+                            <span>UI/UX (Canva)</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Web & Mobile App Security</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-plug"></i>
+                            <span>API Integration</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git & Deployment</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Progress & Learning -->
+                <section class="section" id="progress-dev">
+                    <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Ongoing Progress & Learning</h2>
+                    <div class="about-content">
+                        <p><strong>Currently Learning:</strong> Go (Golang) for backend development; React Native for cross-platform mobile apps.</p>
+                        <p class="mission"><strong>Project in Development:</strong> Next Gen Security Hub — an all-in-one platform combining real-time network monitoring, alerting, and reporting for SMEs. <em>(Under Development – Expected Q1 2026)</em></p>
+                    </div>
+                </section>
+
+                <!-- Contact Section -->
+                <section class="section contact-section" id="contact-dev">
+                    <h2 class="section-title"><i class="fas fa-paper-plane"></i> Let's Connect</h2>
+                    <p class="contact-cta">Let's build your next web experience.</p>
+                    <div class="contact-links">
+                        <a href="mailto:ndiirangujooseph@gmail.com" class="contact-btn dev-btn">
+                            <i class="fas fa-envelope"></i> Email
+                        </a>
+                        <a href="https://github.com/cuulkallih" target="_blank" class="contact-btn dev-btn">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="https://linkedin.com/in/joseph-ndirangu-750765356" target="_blank" class="contact-btn dev-btn">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                        <a href="https://twitch.tv/CUULKAL" target="_blank" class="contact-btn dev-btn">
+                            <i class="fab fa-twitch"></i> Twitch
+                        </a>
+                        <a href="https://youtube.com/@CUULKAL" target="_blank" class="contact-btn dev-btn">
+                            <i class="fab fa-youtube"></i> YouTube
+                        </a>
+                        <a href="tel:+254111480604" class="contact-btn dev-btn">
+                            <i class="fas fa-phone"></i> +254 111 480 604
+                        </a>
+                        <a href="#" class="contact-btn dev-btn" title="Portfolio coming soon" aria-label="Portfolio coming soon" onclick="return false;">
+                            <i class="fas fa-globe"></i> Next Gen Labs (soon)
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Footer -->
+                <footer class="footer">
+                    <p>&copy; 2025 Joseph Njuguna | CUULKAL</p>
+                </footer>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
